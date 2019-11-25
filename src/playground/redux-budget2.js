@@ -154,10 +154,10 @@ const expenseTwo = store.dispatch(addExpense ({ description: 'Swimming', amount:
 const expenseThree = store.dispatch(addExpense ({description: 'Driving', amount: 800, createdAt: 7000}));
 const expenseFour = store.dispatch(addExpense ({description: 'Living', amount: 1300, createdAt: 11000}));
 
-//store.dispatch(setTextFilter('vi'));
+store.dispatch(setTextFilter('fe'));
 
-store.dispatch(sortByAmount());
-store.dispatch(sortByDate());
+//store.dispatch(sortByAmount());
+//store.dispatch(sortByDate());
  
 // store.dispatch(removeExpense({ id: expenseOne.expense.id}));
 // store.dispatch(editExpense(expenseTwo.expense.id, { amount: 5989, description: 'mountain climbing'}));

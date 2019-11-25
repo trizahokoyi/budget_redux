@@ -8,12 +8,13 @@ const ExpenseList = (props) => (
     <div>
         <h1> Expense List </h1>
         {props.expenses.map((expense) =>{
-            return <ExpenseListItem key = {expense.id}{...expense} />
+            return <ExpenseListItem key = {expense.id} {...expense} /> //looking for description,amnt,createdAt
         })}
     </div>
 );
 
 const mapStateToProps = (state) => {
+    //console.log(state);
     return{
         expenses: selectExpenses(state.expenses, state.filters)
     };

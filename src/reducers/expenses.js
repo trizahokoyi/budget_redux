@@ -1,5 +1,5 @@
 //expenses reducer
-const expensesReducerDefaultState = [];
+const expensesReducerDefaultState = []; //the current state is empty
 
 export default (state = expensesReducerDefaultState, action) => {
   switch(action.type) {

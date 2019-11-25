@@ -9,19 +9,11 @@ import getVisibleExpenses from './selectors/expenses';
 import 'normalize.css/normalize.css';
 import './styles/styles.scss';
 
-const store = configureStore();
+const store = configureStore(); // returns the two states
 
-store.dispatch(addExpense({ description: 'Water bill', amount: 4500 }));
-store.dispatch(addExpense({ description: 'Gas bill', amount: 5000 }));
-store.dispatch(setTextFilter('water'));
-
-setTimeout(() => {
-    store.dispatch(setTextFilter('bill'));
-}, 3000);
-
-const state = store.getState();
-const visibleExpenses = getVisibleExpenses(state.expenses, state.filters);
-console.log(visibleExpenses);
+store.dispatch(addExpense({ description: 'Water bill', amount: 4500, createdAt: 3000 }));
+store.dispatch(addExpense({ description: 'Gas bill', amount: 5000, createdAt: 11000 }));
+store.dispatch(addExpense({ description: 'Visit Canada', amount: 10000, createdAt: 8000}));
 
 const jsx = (
     <Provider store = {store}>
